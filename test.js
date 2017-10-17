@@ -18,7 +18,7 @@ function isEven(num){
 
 describe ('unit testing' , function(){
 
-it  ('should return when number is even', function(){
+it  ('should return when num  is even', function(){
 
 
     isEven(4).should.be.true;
