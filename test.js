@@ -3,6 +3,10 @@
 
 //jshit expr: true
 
+
+describe ('No of tests', function(){
+
+
 var chai =require('chai'),
 expect=chai.expect;
 
@@ -28,4 +32,27 @@ it  ('should return when num  is even', function(){
     expect(isEven(5)).to.be.false;
  })
 
-})
+});
+
+function add (num1, num2){
+    
+        return num1+num2; 
+    }
+    describe ('add without setup/ teardown', function(){
+    
+    
+        var num=5;
+    
+        it('should be ten when adding 5 to 5 ', function(){
+    
+            num = add (num,5);
+            num.should.equal(10);
+        })
+    
+        it.skip('should be 12 when adding 7 to 5 ', function(){
+            
+                    add(num ,7).should.equal(12);
+                })
+    });
+    
+    });
