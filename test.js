@@ -9,6 +9,7 @@ describe ('No of tests', function(){
 
 var chai =require('chai'),
 expect=chai.expect;
+var request=require('request');
 
 chai.should();
 
@@ -48,6 +49,13 @@ function add (num1, num2){
             num = add (num,5);
             num.should.equal(10);
         })
+
+        it('Main page content', function(done) {
+            request('http://localhost:8080' , function(error, response, body) {
+                expect(body).to.equal('Hello World');
+                done();
+            });
+        });
     
         it.skip('should be 12 when adding 7 to 5 ', function(){
             
@@ -56,3 +64,6 @@ function add (num1, num2){
     });
     
     });
+
+
+

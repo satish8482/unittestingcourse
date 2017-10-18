@@ -16,7 +16,8 @@
     "url": "https://github.com/satish8482/unittestingcourse/issues"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test1":"mocha"
   },
   "homepage": "https://github.com/satish8482/unittestingcourse#readme",
   "dependencies": {
